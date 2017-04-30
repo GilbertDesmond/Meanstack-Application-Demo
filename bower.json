@@ -1,0 +1,21 @@
+{
+  "name": "meanstack",
+  "description": "angular demo",
+  "main": "server.js",
+  "authors": [
+    "Gilbert desmond"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angular",
+    "demo"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
