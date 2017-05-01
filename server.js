@@ -28,9 +28,10 @@ mongoose.connect(DB, function(err){
 
 app.set('views', __dirname + '/client/views' );
 app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
 app.use(express.static(path.join(__dirname, 'client')));
 
-app.listen(port, function(){
+app.listen(port, function() {
     console.log("Listening on port 8000" + port);
 });
 
