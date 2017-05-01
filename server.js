@@ -6,16 +6,17 @@ var mongoose = require('mongoose');
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
-var mrogan = require('morgan');
+var morgan = require('morgan');
 var path = require('path');
 
 var app = express();
 app.use(morgan('dev'));
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : true}));
+app.use(bodyParser.json());
 app.use('/', mainRouter);
 app.use('/api', apiRouter);
 mongoose.connect(DB, function(err){
+    
     if (err) {
         return err;
     }
